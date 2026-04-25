@@ -15,4 +15,4 @@ resposta = chat.send_message(pergunta)
 
 print(resposta.text)
 
-chat.get_history()
+print(chat.get_history())
