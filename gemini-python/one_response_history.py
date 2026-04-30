@@ -9,10 +9,10 @@ client = genai.Client(api_key=api_key)
 
 chat = client.chats.create(model="gemini-3-flash-preview")
 
-pergunta = input("Digite algo para o chat bot: ")
-
-resposta = chat.send_message(pergunta)
-
-print(resposta.text)
+prompt = input("Digite o prompt para a LLM: ")
+while prompt != "/exit":
+    resposta = chat.send_message(prompt)
+    print(resposta.text)
+    prompt = input("Digite o prompt para a LLM: ")
 
 print(chat.get_history())
