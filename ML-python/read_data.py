@@ -6,7 +6,7 @@ pd.set_option("display.max_rows", None)
 pd.set_option("display.max_columns", None)
 
 # Fazendo um data frame com o arquivo csv.
-df = pd.read_csv("exemplo_limpeza_dados.csv")
+df = pd.read_csv("Tratamento_de_dados/dados_nao_tratados.csv")
 print(df)
 print()
 
