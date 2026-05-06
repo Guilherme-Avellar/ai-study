@@ -1,6 +1,10 @@
 import pandas as pd
 import numpy as np
 
+'''
+Exemplo de como visualizar e tratar dados usando uma tabela .csv
+'''
+
 # para mostrar a tabela inteira nos prints, config do pandas.
 pd.set_option("display.max_rows", None)
 pd.set_option("display.max_columns", None)
@@ -65,7 +69,7 @@ final = pd.concat([df, aux], axis=1)
 final.drop(columns=["Country","Grade", "Purchased"], inplace=True)
 # print(final)
 # guardar o resultado dos dados tratados que estão em final em um csv
-final.to_csv("dados_tratados.csv")
+final.to_csv("Tratamento_de_dados/dados_tratados.csv")
 
 # tratando a escala dos dados com padronização
 sc = StandardScaler()
@@ -79,6 +83,6 @@ df_final_normalizado = pd.DataFrame(final_normalizado, columns=final.columns)
 # print(df_final_padronizado)
 # print(df_final_normalizado)
 # salvar a padronização e a normalização em arquivos csv
-df_final_padronizado.to_csv("dados_padronizados.csv")
-df_final_normalizado.to_csv("dados_normalizados.csv")
+df_final_padronizado.to_csv("Tratamento_de_dados/dados_padronizados.csv")
+df_final_normalizado.to_csv("Tratamento_de_dados/dados_normalizados.csv")
 
